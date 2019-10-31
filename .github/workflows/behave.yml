@@ -11,12 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install dependencies
+    - name: Check environment
       run: |
-        pip3 install --user black==19.3b0 behave
-    - name: Check formatting
-      run: |
-        black --check .
-    - name: Run tests
-      run: |
-        behave tests/*.feature
+        pwd
+        ls
+        env
